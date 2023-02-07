@@ -12,17 +12,17 @@ User Story #211916: WebAPI: Create Star Wars Characters API
 >   - [x] Allegiance (Rebellion, Empire, None)
 >   - [x] IsJedi (True / False)
 >   - [x] Trilogy Introduced In (Original, Prequel, Sequel)
-> - [ ] Create a new CharacterController.
-> - [ ] Inside the CharacterController, populate a list of characters as
+> - [x] Create a new CharacterController.
+> - [x] Inside the CharacterController, populate a list of characters as
 >   follows:
->   - [ ] 1, Luke Skywalker, Rebellion, True, Original
->   - [ ] 2, Obi-Wan Kenobi, Rebellion, True, Original
->   - [ ] 3, Jar Jar Binks, None, False, Prequel
->   - [ ] 4, Poe Dameron, Rebellion, False, Sequel
->   - [ ] 5, Finn, Rebellion, False, Sequel
->   - [ ] 6, Rey Skywalker, Rebellion, True, Sequel
->   - [ ] 7, C-3PO, Rebellion, False, Original
->   - [ ] 8, R2-D2, Rebellion, False, Original
+>   - [x] 1, Luke Skywalker, Rebellion, True, Original
+>   - [x] 2, Obi-Wan Kenobi, Rebellion, True, Original
+>   - [x] 3, Jar Jar Binks, None, False, Prequel
+>   - [x] 4, Poe Dameron, Rebellion, False, Sequel
+>   - [x] 5, Finn, Rebellion, False, Sequel
+>   - [x] 6, Rey Skywalker, Rebellion, True, Sequel
+>   - [x] 7, C-3PO, Rebellion, False, Original
+>   - [x] 8, R2-D2, Rebellion, False, Original
 > - [ ] Your WebAPI should do the following (this will not have Data
 >   Access, so this is just based on the data you've entered in the
 >   Constructor):
