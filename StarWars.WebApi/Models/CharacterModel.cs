@@ -3,7 +3,7 @@
     public enum Allegiance
     {
         None = 0,
-        Rebel,
+        Rebellion,
         Empire,
     }
 
