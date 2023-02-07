@@ -6,12 +6,12 @@ User Story #211916: WebAPI: Create Star Wars Characters API
 
 > Create a WebAPI that gives us information on Star Wars characters.
 >
-> - [ ] Create a StarWarsCharacter model that contains the following:
->   - [ ] Id
->   - [ ] Name
->   - [ ] Allegiance (Rebellion, Empire, None)
->   - [ ] IsJedi (True / False)
->   - [ ] Trilogy Introduced In (Original, Prequel, Sequel)
+> - [x] Create a StarWarsCharacter model that contains the following:
+>   - [x] Id
+>   - [x] Name
+>   - [x] Allegiance (Rebellion, Empire, None)
+>   - [x] IsJedi (True / False)
+>   - [x] Trilogy Introduced In (Original, Prequel, Sequel)
 > - [ ] Create a new CharacterController.
 > - [ ] Inside the CharacterController, populate a list of characters as
 >   follows:
