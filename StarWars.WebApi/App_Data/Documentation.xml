@@ -503,18 +503,17 @@
                 <paramref name="id">id</paramref>.
             </returns>
         </member>
-        <member name="M:StarWars.WebApi.Controllers.CharactersController.GetByAllegiance(StarWars.WebApi.Models.Allegiance)">
+        <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAllegianceByName(System.String)">
             <summary>
-                Gets all <see cref="T:StarWars.WebApi.Models.CharacterModel">CharacterModel</see>s with the specified
-                <paramref name="allegiance">allegiance</paramref>.
+                Gets the Allegiance
             </summary>
-            <param name="allegiance">
-                The <see cref="P:StarWars.WebApi.Models.CharacterModel.Allegiance">CharacterModel.Allegiance</see> to filter for.
+            <param name="name">
+                The <see cref="P:StarWars.WebApi.Models.CharacterModel.Name">CharacterModel.Name</see> to filter for.
             </param>
             <returns>
-                An <see cref="T:System.Collections.Generic.IEnumerable`1">IEnumerable</see> of all
+                An <see cref="T:StarWars.WebApi.Models.Allegiance">Allegiance</see> of the first
                 <see cref="T:StarWars.WebApi.Models.CharacterModel">CharacterModel</see>s with the specified
-                <paramref name="allegiance">allegiance</paramref>.
+                <paramref name="name">name</paramref>.
             </returns>
         </member>
     </members>

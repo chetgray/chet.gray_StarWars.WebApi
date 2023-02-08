@@ -134,31 +134,29 @@ namespace StarWars.WebApi.Controllers
             return _characters[id];
         }
 
-        // GET api/Characters/ByAllegiance/{allegiance}
+        // GET api/Characters/AllegianceByName/{name}
         /// <summary>
-        ///     Gets all <see cref="CharacterModel">CharacterModel</see>s with the specified
-        ///     <paramref name="allegiance">allegiance</paramref>.
+        ///     Gets the Allegiance
         /// </summary>
-        /// <param name="allegiance">
-        ///     The <see cref="CharacterModel.Allegiance">CharacterModel.Allegiance</see> to filter for.
+        /// <param name="name">
+        ///     The <see cref="CharacterModel.Name">CharacterModel.Name</see> to filter for.
         /// </param>
         /// <returns>
-        ///     An <see cref="IEnumerable{CharacterModel}">IEnumerable</see> of all
+        ///     An <see cref="Allegiance">Allegiance</see> of the first
         ///     <see cref="CharacterModel">CharacterModel</see>s with the specified
-        ///     <paramref name="allegiance">allegiance</paramref>.
+        ///     <paramref name="name">name</paramref>.
         /// </returns>
-        [Route("api/Characters/ByAllegiance/{allegiance}")]
-        public IEnumerable<CharacterModel> GetByAllegiance(Allegiance allegiance)
+        [Route("api/Characters/AllegianceByName/{name}")]
+        public Allegiance? GetAllegianceByName(string name)
         {
-            List<CharacterModel> characters = new List<CharacterModel>();
             foreach (CharacterModel character in _characters.Values)
             {
-                if (character.Allegiance == allegiance)
+                if (character.Name == name)
                 {
-                    characters.Add(character);
+                    return character.Allegiance;
                 }
             }
-            return characters;
+            return null;
         }
     }
 }
