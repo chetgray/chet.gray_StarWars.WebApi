@@ -131,7 +131,14 @@ namespace StarWars.WebApi.Controllers
         [Route("api/Characters/ById/{id}")]
         public CharacterModel GetById(int id)
         {
-            return _characters[id];
+            try
+            {
+                return _characters[id];
+            }
+            catch (KeyNotFoundException)
+            {
+                return null;
+            }
         }
 
         // GET api/Characters/AllegianceByName/{name}
