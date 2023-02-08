@@ -101,5 +101,16 @@ namespace StarWars.WebApi.Controllers
                 }
             },
         };
+
+        // GET api/Characters/All
+        /// <summary>
+        /// Gets all of the <see cref="CharacterModel"/>s.
+        /// </summary>
+        /// <returns>An <see cref="IEnumerable"/> of all <see cref="CharacterModel"/>s.</returns>
+        [Route("api/Characters/All")]
+        public IEnumerable<CharacterModel> GetAll()
+        {
+            return _characters.Values;
+        }
     }
 }

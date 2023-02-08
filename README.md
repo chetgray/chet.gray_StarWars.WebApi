@@ -26,7 +26,7 @@ User Story #211916: WebAPI: Create Star Wars Characters API
 > - [ ] Your WebAPI should do the following (this will not have Data
 >   Access, so this is just based on the data you've entered in the
 >   Constructor):
->   - [ ] Have a GET method to give a list of all the characters
+>   - [x] Have a GET method to give a list of all the characters
 >   - [ ] Have a GET method to get a character by Id
 >   - [ ] Have a GET method to get a character's allegiance by name
 >   - [ ] Have a GET method to list of all Jedis
