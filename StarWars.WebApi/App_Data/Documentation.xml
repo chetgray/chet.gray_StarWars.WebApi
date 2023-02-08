@@ -525,5 +525,17 @@
                 <see cref="T:StarWars.WebApi.Models.CharacterModel">CharacterModel</see>s that are Jedi.
             </returns>
         </member>
+        <member name="M:StarWars.WebApi.Controllers.CharactersController.GetByTrilogy(StarWars.WebApi.Models.Trilogy)">
+            <summary>
+                Gets all of the <see cref="T:StarWars.WebApi.Models.CharacterModel">CharacterModel</see>s that are introduced in
+                the specified <paramref name="trilogy">trilogy</paramref>.
+            </summary>
+            <param name="trilogy">The <see cref="T:StarWars.WebApi.Models.Trilogy">Trilogy</see> to filter for.</param>
+            <returns>
+                An <see cref="T:System.Collections.Generic.IEnumerable`1">IEnumerable</see> of all
+                <see cref="T:StarWars.WebApi.Models.CharacterModel">CharacterModel</see>s that are introduced in the specified
+                <paramref name="trilogy">trilogy</paramref>.
+            </returns>
+        </member>
     </members>
 </doc>

@@ -187,5 +187,30 @@ namespace StarWars.WebApi.Controllers
             }
             return jedi;
         }
+
+        // GET api/Characters/ByTrilogy/{trilogy}
+        /// <summary>
+        ///     Gets all of the <see cref="CharacterModel">CharacterModel</see>s that are introduced in
+        ///     the specified <paramref name="trilogy">trilogy</paramref>.
+        /// </summary>
+        /// <param name="trilogy">The <see cref="Trilogy">Trilogy</see> to filter for.</param>
+        /// <returns>
+        ///     An <see cref="IEnumerable{CharacterModel}">IEnumerable</see> of all
+        ///     <see cref="CharacterModel">CharacterModel</see>s that are introduced in the specified
+        ///     <paramref name="trilogy">trilogy</paramref>.
+        /// </returns>
+        [Route("api/Characters/ByTrilogy/{trilogy}")]
+        public IEnumerable<CharacterModel> GetByTrilogy(Trilogy trilogy)
+        {
+            List<CharacterModel> characters = new List<CharacterModel>();
+            foreach (CharacterModel character in _characters.Values)
+            {
+                if (character.TrilogyIntroducedIn == trilogy)
+                {
+                    characters.Add(character);
+                }
+            }
+            return characters;
+        }
     }
 }
