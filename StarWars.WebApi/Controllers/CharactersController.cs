@@ -124,5 +124,25 @@ namespace StarWars.WebApi.Controllers
         {
             return _characters[id];
         }
+
+        // GET api/Characters/ByAllegiance/{allegiance}
+        /// <summary>
+        /// Gets all <see cref="CharacterModel"/>s with the specified <paramref name="allegiance"/>.
+        /// </summary>
+        /// <param name="allegiance">The <see cref="CharacterModel.Allegiance"/> to filter for.</param>
+        /// <returns>An <see cref="IEnumerable"/> of all <see cref="CharacterModel"/>s with the specified <paramref name="allegiance"/></returns>
+        [Route("api/Characters/ByAllegiance/{allegiance}")]
+        public IEnumerable<CharacterModel> GetByAllegiance(Allegiance allegiance)
+        {
+            List<CharacterModel> characters = new List<CharacterModel>();
+            foreach (CharacterModel character in _characters.Values)
+            {
+                if (character.Allegiance == allegiance)
+                {
+                    characters.Add(character);
+                }
+            }
+            return characters;
+        }
     }
 }
