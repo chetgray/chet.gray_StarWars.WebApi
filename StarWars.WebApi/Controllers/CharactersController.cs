@@ -112,5 +112,17 @@ namespace StarWars.WebApi.Controllers
         {
             return _characters.Values;
         }
+
+        // GET api/Characters/ById/{id}
+        /// <summary>
+        /// Gets the <see cref="CharacterModel"/> with the specified <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The <see cref="CharacterModel.Id"/> to filter for.</param>
+        /// <returns>The <see cref="CharacterModel"/> with the specified <paramref name="id"/>.</returns>
+        [Route("api/Characters/ById/{id}")]
+        public CharacterModel GetById(int id)
+        {
+            return _characters[id];
+        }
     }
 }
