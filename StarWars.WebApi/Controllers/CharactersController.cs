@@ -200,9 +200,13 @@ namespace StarWars.WebApi.Controllers
         ///     <paramref name="trilogy">trilogy</paramref>.
         /// </returns>
         [Route("api/Characters/ByTrilogy/{trilogy}")]
-        public IEnumerable<CharacterModel> GetByTrilogy(Trilogy trilogy)
+        public IEnumerable<CharacterModel> GetByTrilogy(Trilogy? trilogy)
         {
             List<CharacterModel> characters = new List<CharacterModel>();
+            if (trilogy is null)
+            {
+                return characters;
+            }
             foreach (CharacterModel character in _characters.Values)
             {
                 if (character.TrilogyIntroducedIn == trilogy)
