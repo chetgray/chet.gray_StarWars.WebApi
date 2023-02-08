@@ -104,9 +104,12 @@ namespace StarWars.WebApi.Controllers
 
         // GET api/Characters/All
         /// <summary>
-        /// Gets all of the <see cref="CharacterModel"/>s.
+        ///     Gets all of the <see cref="CharacterModel">CharacterModel</see>s.
         /// </summary>
-        /// <returns>An <see cref="IEnumerable"/> of all <see cref="CharacterModel"/>s.</returns>
+        /// <returns>
+        ///     An <see cref="IEnumerable{CharacterModel}">IEnumerable</see> of all
+        ///     <see cref="CharacterModel">CharacterModel</see>s.
+        /// </returns>
         [Route("api/Characters/All")]
         public IEnumerable<CharacterModel> GetAll()
         {
@@ -115,10 +118,16 @@ namespace StarWars.WebApi.Controllers
 
         // GET api/Characters/ById/{id}
         /// <summary>
-        /// Gets the <see cref="CharacterModel"/> with the specified <paramref name="id"/>.
+        ///     Gets the <see cref="CharacterModel">CharacterModel</see> with the specified
+        ///     <paramref name="id">id</paramref>.
         /// </summary>
-        /// <param name="id">The <see cref="CharacterModel.Id"/> to filter for.</param>
-        /// <returns>The <see cref="CharacterModel"/> with the specified <paramref name="id"/>.</returns>
+        /// <param name="id">
+        ///     The <see cref="CharacterModel.Id">CharacterModel.Id</see> to filter for.
+        /// </param>
+        /// <returns>
+        ///     The <see cref="CharacterModel">CharacterModel</see> with the specified
+        ///     <paramref name="id">id</paramref>.
+        /// </returns>
         [Route("api/Characters/ById/{id}")]
         public CharacterModel GetById(int id)
         {
@@ -127,10 +136,17 @@ namespace StarWars.WebApi.Controllers
 
         // GET api/Characters/ByAllegiance/{allegiance}
         /// <summary>
-        /// Gets all <see cref="CharacterModel"/>s with the specified <paramref name="allegiance"/>.
+        ///     Gets all <see cref="CharacterModel">CharacterModel</see>s with the specified
+        ///     <paramref name="allegiance">allegiance</paramref>.
         /// </summary>
-        /// <param name="allegiance">The <see cref="CharacterModel.Allegiance"/> to filter for.</param>
-        /// <returns>An <see cref="IEnumerable"/> of all <see cref="CharacterModel"/>s with the specified <paramref name="allegiance"/></returns>
+        /// <param name="allegiance">
+        ///     The <see cref="CharacterModel.Allegiance">CharacterModel.Allegiance</see> to filter for.
+        /// </param>
+        /// <returns>
+        ///     An <see cref="IEnumerable{CharacterModel}">IEnumerable</see> of all
+        ///     <see cref="CharacterModel">CharacterModel</see>s with the specified
+        ///     <paramref name="allegiance">allegiance</paramref>.
+        /// </returns>
         [Route("api/Characters/ByAllegiance/{allegiance}")]
         public IEnumerable<CharacterModel> GetByAllegiance(Allegiance allegiance)
         {

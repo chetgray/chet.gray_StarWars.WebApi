@@ -34,4 +34,4 @@ User Story #211916: WebAPI: Create Star Wars Characters API
 >     characters from that trilogy
 >   - [ ] Have a POST method that allows you to enter a new character
 >     (we can't save it or anything just yet)
->   - [ ] Have good XML documentation
+>   - [x] Have good XML documentation
