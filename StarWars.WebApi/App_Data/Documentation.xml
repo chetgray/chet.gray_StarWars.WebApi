@@ -516,5 +516,14 @@
                 <paramref name="name">name</paramref>.
             </returns>
         </member>
+        <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAllJedi">
+            <summary>
+                Gets all of the <see cref="T:StarWars.WebApi.Models.CharacterModel">CharacterModel</see>s that are Jedi.
+            </summary>
+            <returns>
+                An <see cref="T:System.Collections.Generic.IEnumerable`1">IEnumerable</see> of all
+                <see cref="T:StarWars.WebApi.Models.CharacterModel">CharacterModel</see>s that are Jedi.
+            </returns>
+        </member>
     </members>
 </doc>

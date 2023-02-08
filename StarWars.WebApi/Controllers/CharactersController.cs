@@ -158,5 +158,27 @@ namespace StarWars.WebApi.Controllers
             }
             return null;
         }
+
+        // GET api/Characters/AllJedi
+        /// <summary>
+        ///     Gets all of the <see cref="CharacterModel">CharacterModel</see>s that are Jedi.
+        /// </summary>
+        /// <returns>
+        ///     An <see cref="IEnumerable{CharacterModel}">IEnumerable</see> of all
+        ///     <see cref="CharacterModel">CharacterModel</see>s that are Jedi.
+        /// </returns>
+        [Route("api/Characters/AllJedi")]
+        public IEnumerable<CharacterModel> GetAllJedi()
+        {
+            List<CharacterModel> jedi = new List<CharacterModel>();
+            foreach (CharacterModel character in _characters.Values)
+            {
+                if (character.IsJedi)
+                {
+                    jedi.Add(character);
+                }
+            }
+            return jedi;
+        }
     }
 }

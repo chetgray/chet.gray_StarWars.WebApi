@@ -29,7 +29,7 @@ User Story #211916: WebAPI: Create Star Wars Characters API
 >   - [x] Have a GET method to give a list of all the characters
 >   - [x] Have a GET method to get a character by Id
 >   - [x] Have a GET method to get a character's allegiance by name
->   - [ ] Have a GET method to list of all Jedis
+>   - [x] Have a GET method to list of all Jedis
 >   - [ ] Have a GET method that accepts a trilogy and returns all the
 >     characters from that trilogy
 >   - [ ] Have a POST method that allows you to enter a new character
