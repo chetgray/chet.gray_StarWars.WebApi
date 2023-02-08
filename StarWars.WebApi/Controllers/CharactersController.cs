@@ -103,12 +103,10 @@ namespace StarWars.WebApi.Controllers
         };
 
         // GET api/Characters/All
-        /// <summary>
-        ///     Gets all of the <see cref="CharacterModel">CharacterModel</see>s.
-        /// </summary>
+        /// <summary>Gets all <see cref="CharacterModel">character</see>s.</summary>
         /// <returns>
-        ///     An <see cref="IEnumerable{CharacterModel}">IEnumerable</see> of all
-        ///     <see cref="CharacterModel">CharacterModel</see>s.
+        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
+        ///     <see cref="CharacterModel">character</see>s.
         /// </returns>
         [Route("api/Characters/All")]
         public IEnumerable<CharacterModel> GetAll()
@@ -118,15 +116,14 @@ namespace StarWars.WebApi.Controllers
 
         // GET api/Characters/ById/{id}
         /// <summary>
-        ///     Gets the <see cref="CharacterModel">CharacterModel</see> with the specified
-        ///     <paramref name="id">id</paramref>.
+        ///     Gets the <see cref="CharacterModel">character</see> with the specified
+        ///     <paramref name="id">ID</paramref>.
         /// </summary>
-        /// <param name="id">
-        ///     The <see cref="CharacterModel.Id">CharacterModel.Id</see> to filter for.
-        /// </param>
+        /// <param name="id">The <see cref="CharacterModel.Id">ID</see> to filter for.</param>
         /// <returns>
-        ///     The <see cref="CharacterModel">CharacterModel</see> with the specified
-        ///     <paramref name="id">id</paramref>.
+        ///     The <see cref="CharacterModel">character</see> with the specified
+        ///     <paramref name="id">ID</paramref>, or <c><see langword="null">null</see></c> if none
+        ///     exists.
         /// </returns>
         [Route("api/Characters/ById/{id}")]
         public CharacterModel GetById(int id)
@@ -143,15 +140,16 @@ namespace StarWars.WebApi.Controllers
 
         // GET api/Characters/AllegianceByName/{name}
         /// <summary>
-        ///     Gets the Allegiance
-        /// </summary>
-        /// <param name="name">
-        ///     The <see cref="CharacterModel.Name">CharacterModel.Name</see> to filter for.
-        /// </param>
-        /// <returns>
-        ///     An <see cref="Allegiance">Allegiance</see> of the first
-        ///     <see cref="CharacterModel">CharacterModel</see>s with the specified
+        ///     Gets the <see cref="CharacterModel.Allegiance">allegiance</see> of the first
+        ///     <see cref="CharacterModel">character</see> with the specified
         ///     <paramref name="name">name</paramref>.
+        /// </summary>
+        /// <param name="name">The <see cref="CharacterModel.Name">name</see> to filter for.</param>
+        /// <returns>
+        ///     The <see cref="CharacterModel.Allegiance">allegiance</see> of the first
+        ///     <see cref="CharacterModel">character</see> with the specified
+        ///     <paramref name="name">name</paramref>, or <c><see langword="null">null</see></c> if none
+        ///     is found.
         /// </returns>
         [Route("api/Characters/AllegianceByName/{name}")]
         public Allegiance? GetAllegianceByName(string name)
@@ -167,12 +165,10 @@ namespace StarWars.WebApi.Controllers
         }
 
         // GET api/Characters/AllJedi
-        /// <summary>
-        ///     Gets all of the <see cref="CharacterModel">CharacterModel</see>s that are Jedi.
-        /// </summary>
+        /// <summary>Gets all <see cref="CharacterModel">character</see>s that are Jedi.</summary>
         /// <returns>
-        ///     An <see cref="IEnumerable{CharacterModel}">IEnumerable</see> of all
-        ///     <see cref="CharacterModel">CharacterModel</see>s that are Jedi.
+        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
+        ///     <see cref="CharacterModel">character</see>s that are Jedi.
         /// </returns>
         [Route("api/Characters/AllJedi")]
         public IEnumerable<CharacterModel> GetAllJedi()
@@ -190,13 +186,15 @@ namespace StarWars.WebApi.Controllers
 
         // GET api/Characters/ByTrilogy/{trilogy}
         /// <summary>
-        ///     Gets all of the <see cref="CharacterModel">CharacterModel</see>s that are introduced in
-        ///     the specified <paramref name="trilogy">trilogy</paramref>.
+        ///     Gets all <see cref="CharacterModel">character</see>s that are introduced in the
+        ///     specified <paramref name="trilogy">trilogy</paramref>.
         /// </summary>
-        /// <param name="trilogy">The <see cref="Trilogy">Trilogy</see> to filter for.</param>
+        /// <param name="trilogy">
+        ///     The <see cref="CharacterModel.TrilogyIntroducedIn">trilogy</see> to filter for.
+        /// </param>
         /// <returns>
-        ///     An <see cref="IEnumerable{CharacterModel}">IEnumerable</see> of all
-        ///     <see cref="CharacterModel">CharacterModel</see>s that are introduced in the specified
+        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
+        ///     <see cref="CharacterModel">character</see>s that are introduced in the specified
         ///     <paramref name="trilogy">trilogy</paramref>.
         /// </returns>
         [Route("api/Characters/ByTrilogy/{trilogy}")]
