@@ -7,7 +7,7 @@ Access
 
 > Update your Star Wars Character API (US 211916) to add data access.
 >
-> - [ ] Create a new StarWars database.
+> - [x] Create a new StarWars database.
 >   - [ ] Within the database, create:
 >     - [ ] New table: CharacterGeneralInfo
 >       - [ ] Id
