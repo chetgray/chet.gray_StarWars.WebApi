@@ -521,7 +521,7 @@
                 <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s that are Jedi.
             </returns>
         </member>
-        <member name="M:StarWars.WebApi.Controllers.CharactersController.GetByTrilogy(System.Nullable{StarWars.WebApi.Models.Trilogy})">
+        <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAllByTrilogy(System.Nullable{StarWars.WebApi.Models.Trilogy})">
             <summary>
                 Gets all <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s that are introduced in the
                 specified <paramref name="trilogy">trilogy</paramref>.

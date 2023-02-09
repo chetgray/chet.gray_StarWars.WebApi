@@ -185,7 +185,7 @@ namespace StarWars.WebApi.Controllers
             return jedi;
         }
 
-        // GET api/Characters/ByTrilogy/{trilogy}
+        // GET api/Characters/AllByTrilogy/{trilogy}
         /// <summary>
         ///     Gets all <see cref="CharacterModel">character</see>s that are introduced in the
         ///     specified <paramref name="trilogy">trilogy</paramref>.
@@ -198,8 +198,8 @@ namespace StarWars.WebApi.Controllers
         ///     <see cref="CharacterModel">character</see>s that are introduced in the specified
         ///     <paramref name="trilogy">trilogy</paramref>.
         /// </returns>
-        [Route("api/Characters/ByTrilogy/{trilogy}")]
-        public IEnumerable<CharacterModel> GetByTrilogy(Trilogy? trilogy)
+        [Route("api/Characters/AllByTrilogy/{trilogy}")]
+        public IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy? trilogy)
         {
             List<CharacterModel> characters = new List<CharacterModel>();
             if (trilogy is null)
