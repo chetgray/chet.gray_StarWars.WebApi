@@ -1,6 +1,73 @@
 StarWars.WebApi
 ===============
 
+User Story #211918: WebAPI: Update Star Wars Character API to add Data
+Access
+----------------------------------------------------------------------
+
+> Update your Star Wars Character API (US 211916) to add data access.
+>
+> - [ ] Create a new StarWars database.
+>   - [ ] Within the database, create:
+>     - [ ] New table: CharacterGeneralInfo
+>       - [ ] Id
+>       - [ ] Name
+>       - [ ] Allegiance (Rebellion, Empire, None)
+>       - [ ] IsJedi (True / False)
+>       - [ ] Trilogy Introduced In Id - FOREIGN KEY to new
+>         TrilogyInformation table (see below).
+>     - [ ] New Table: TrilogyInfo
+>       - [ ] Id
+>       - [ ] Trilogy Name (Original, Prequel, Sequel)
+>     - [ ] New Stored Procedure: Get all Character Information
+>     - [ ] New Stored Procedure: Get Character Information by Name
+>     - [ ] New Stored Procedure: Get Character Information by
+>       Allegiance
+>     - [ ] New Stored Procedure: Get Character Information by Trilogy
+>       - [ ] Be sure all your stored procs appropriately JOIN your 2
+>         tables to get all your information!
+>     - [ ] New Stored Procedure: INSERT new character information into
+>       the CharacterGeneralInfo table
+>       - [ ] Hint: You may also need a stored proc to get the Trilogy
+>         ID by Name, so you don't have to make the API caller pass the
+>         Trilogy ID (it's not realistic that they'll know that) to add
+>         a new character. Instead, let them pass the trilogy name, then
+>         you look up the ID, then you use that ID to add to the
+>         Character table.
+> - [ ] Create SQL to INSERT new data into both tables (or just use the
+>   "Edit top 200 rows" in SSMS to add it. You can use the data below.
+>   Be sure to put the trilogy information in its separate table with an
+>   Id pointing to it from the main table (foreign key).
+>   - [ ] 1, Luke Skywalker, Rebellion, True, Original
+>   - [ ] 2, Obi-Wan Kenobi, Rebellion, True, Original
+>   - [ ] 3, Jar Jar Binks, None, False, Prequel
+>   - [ ] 4, Poe Dameron, Rebellion, False, Sequel
+>   - [ ] 5, Finn, Rebellion, False, Sequel
+>   - [ ] 6, Rey Skywalker, Rebellion, True, Sequel
+>   - [ ] 7, C-3PO, Rebellion, False, Original
+>   - [ ] 8, R2-D2, Rebellion, False, Original
+> - [ ] Change your WebAPI to add Data Access as we discussed.
+>   - [ ] You'll want to have a new class library with a DataAccess
+>     namespace, a Repository namespace, and a DTOs namespace.
+> - [ ] Update the functionality of your API so that it does the
+>   following:
+> - [ ] Your WebAPI should do the following:
+>   - [ ] Have a GET method to give a list of all the character
+>     information (get it from the DB)
+>   - [ ] Have a GET method to get a character's information by their
+>     name (get it from the DB)
+>   - [ ] Have a GET method to get a list of character information by
+>     allegiance (get it from the DB)
+>   - [ ] Have a GET method to get a list of character information by
+>     trilogy (get it from the DB)
+>   - [ ] Have a POST method that allows you to enter a new character
+>     (write it to the DB)
+>   - [ ] \*\* Any methods from your older version of the app that were
+>     hardcoded that aren't here, like getting character information
+>     where Jedi = True, can stay hardcoded. \*\*
+>   - [ ] Have good XML documentation
+> - [ ] Thoroughly test this via Postman.
+
 User Story #211916: WebAPI: Create Star Wars Characters API
 -----------------------------------------------------------
 
