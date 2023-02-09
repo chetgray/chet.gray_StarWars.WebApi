@@ -1,28 +1,18 @@
 ﻿using System.Collections.Generic;
-using System.Web.Http;
 
-using StarWars.WebApi.Business;
 using StarWars.WebApi.Models;
 
-namespace StarWars.WebApi.Controllers
+namespace StarWars.WebApi.Business
 {
-    public class CharactersController : ApiController
+    internal interface ICharacterBLL
     {
-        private ICharacterBLL _bll = new CharacterBLL();
-
-        // GET api/Characters/All
         /// <summary>Gets all <see cref="CharacterModel">character</see>s.</summary>
         /// <returns>
         ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
         ///     <see cref="CharacterModel">character</see>s.
         /// </returns>
-        [Route("api/Characters/All")]
-        public IEnumerable<CharacterModel> GetAll()
-        {
-            return _bll.GetAll();
-        }
+        IEnumerable<CharacterModel> GetAll();
 
-        // GET api/Characters/ById/{id}
         /// <summary>
         ///     Gets the <see cref="CharacterModel">character</see> with the specified
         ///     <paramref name="id">ID</paramref>.
@@ -33,44 +23,27 @@ namespace StarWars.WebApi.Controllers
         ///     <paramref name="id">ID</paramref>, or <c><see langword="null">null</see></c> if none
         ///     exists.
         /// </returns>
-        [Route("api/Characters/ById/{id}")]
-        public CharacterModel GetById(int id)
-        {
-            return _bll.GetById(id);
-        }
+        CharacterModel GetById(int id);
 
-        // GET api/Characters/AllegianceByName/{name}
         /// <summary>
-        ///     Gets the <see cref="CharacterModel.Allegiance">allegiance</see> of the first
-        ///     <see cref="CharacterModel">character</see> with the specified
+        ///     Gets the first <see cref="CharacterModel">character</see> with the specified
         ///     <paramref name="name">name</paramref>.
         /// </summary>
         /// <param name="name">The <see cref="CharacterModel.Name">name</see> to filter for.</param>
         /// <returns>
-        ///     The <see cref="CharacterModel.Allegiance">allegiance</see> of the first
-        ///     <see cref="CharacterModel">character</see> with the specified
+        ///     The first <see cref="CharacterModel">character</see> with the specified
         ///     <paramref name="name">name</paramref>, or <c><see langword="null">null</see></c> if none
         ///     is found.
         /// </returns>
-        [Route("api/Characters/AllegianceByName/{name}")]
-        public Allegiance? GetAllegianceByName(string name)
-        {
-            return _bll.GetOneByName(name)?.Allegiance;
-        }
+        CharacterModel GetOneByName(string name);
 
-        // GET api/Characters/AllJedi
         /// <summary>Gets all <see cref="CharacterModel">character</see>s that are Jedi.</summary>
         /// <returns>
         ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
         ///     <see cref="CharacterModel">character</see>s that are Jedi.
         /// </returns>
-        [Route("api/Characters/AllJedi")]
-        public IEnumerable<CharacterModel> GetAllJedi()
-        {
-            return _bll.GetAllJedi();
-        }
+        IEnumerable<CharacterModel> GetAllJedi();
 
-        // GET api/Characters/AllByTrilogy/{trilogy}
         /// <summary>
         ///     Gets all <see cref="CharacterModel">character</see>s that are introduced in the
         ///     specified <paramref name="trilogy">trilogy</paramref>.
@@ -83,13 +56,8 @@ namespace StarWars.WebApi.Controllers
         ///     <see cref="CharacterModel">character</see>s that are introduced in the specified
         ///     <paramref name="trilogy">trilogy</paramref>.
         /// </returns>
-        [Route("api/Characters/AllByTrilogy/{trilogy}")]
-        public IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy? trilogy)
-        {
-            return _bll.GetAllByTrilogy(trilogy);
-        }
+        IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy? trilogy);
 
-        // POST api/Characters
         /// <summary>
         ///     Adds a new <see cref="CharacterModel">character</see> to the collection.
         /// </summary>
@@ -101,11 +69,6 @@ namespace StarWars.WebApi.Controllers
         ///     <c><see langword="null">null</see></c> if the
         ///     <paramref name="character">character</paramref> was not added.
         /// </returns>
-        [HttpPost]
-        [Route("api/Characters")]
-        public CharacterModel Add([FromBody] CharacterModel character)
-        {
-            return _bll.Add(character);
-        }
+        CharacterModel Add(CharacterModel character);
     }
 }
