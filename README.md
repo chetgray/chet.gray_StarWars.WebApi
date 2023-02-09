@@ -23,7 +23,7 @@ User Story #211916: WebAPI: Create Star Wars Characters API
 >   - [x] 6, Rey Skywalker, Rebellion, True, Sequel
 >   - [x] 7, C-3PO, Rebellion, False, Original
 >   - [x] 8, R2-D2, Rebellion, False, Original
-> - [ ] Your WebAPI should do the following (this will not have Data
+> - [x] Your WebAPI should do the following (this will not have Data
 >   Access, so this is just based on the data you've entered in the
 >   Constructor):
 >   - [x] Have a GET method to give a list of all the characters
@@ -32,6 +32,6 @@ User Story #211916: WebAPI: Create Star Wars Characters API
 >   - [x] Have a GET method to list of all Jedis
 >   - [x] Have a GET method that accepts a trilogy and returns all the
 >     characters from that trilogy
->   - [ ] Have a POST method that allows you to enter a new character
+>   - [x] Have a POST method that allows you to enter a new character
 >     (we can't save it or anything just yet)
 >   - [x] Have good XML documentation

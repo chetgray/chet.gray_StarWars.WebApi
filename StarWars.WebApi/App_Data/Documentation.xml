@@ -535,5 +535,18 @@
                 <paramref name="trilogy">trilogy</paramref>.
             </returns>
         </member>
+        <member name="M:StarWars.WebApi.Controllers.CharactersController.Add(StarWars.WebApi.Models.CharacterModel)">
+            <summary>
+               Adds a new <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see> to the collection.
+            </summary>
+            <param name="character">
+                The <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see> to add to the collection.
+            </param>
+            <returns>
+                The <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see> that was added to the collection, or
+                <c><see langword="null">null</see></c> if the
+                <paramref name="character">character</paramref> was not added.
+            </returns>
+        </member>
     </members>
 </doc>

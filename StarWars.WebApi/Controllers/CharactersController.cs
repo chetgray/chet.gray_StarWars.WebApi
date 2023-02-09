@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Http;
 
 using StarWars.WebApi.Models;
@@ -213,6 +214,40 @@ namespace StarWars.WebApi.Controllers
                 }
             }
             return characters;
+        }
+
+        // POST api/Characters
+        /// <summary>
+        ///    Adds a new <see cref="CharacterModel">character</see> to the collection.
+        /// </summary>
+        /// <param name="character">
+        ///     The <see cref="CharacterModel">character</see> to add to the collection.
+        /// </param>
+        /// <returns>
+        ///     The <see cref="CharacterModel">character</see> that was added to the collection, or
+        ///     <c><see langword="null">null</see></c> if the
+        ///     <paramref name="character">character</paramref> was not added.
+        /// </returns>
+        [HttpPost]
+        [Route("api/Characters")]
+        public CharacterModel Add([FromBody] CharacterModel character)
+        {
+            try
+            {
+                _characters.Add(character.Id, character);
+            }
+            catch (ArgumentException)
+            {
+                return null;
+            }
+            try
+            {
+                return _characters[character.Id];
+            }
+            catch (KeyNotFoundException)
+            {
+                return null;
+            }
         }
     }
 }
