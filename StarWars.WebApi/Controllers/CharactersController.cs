@@ -10,14 +10,13 @@ namespace StarWars.WebApi.Controllers
     {
         private ICharacterBLL _bll = new CharacterBLL();
 
-        // GET api/Characters/All
+        // GET api/Characters
         /// <summary>Gets all <see cref="CharacterModel">character</see>s.</summary>
         /// <returns>
         ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
         ///     <see cref="CharacterModel">character</see>s.
         /// </returns>
-        [Route("api/Characters/All")]
-        public IEnumerable<CharacterModel> GetAll()
+        public IEnumerable<CharacterModel> Get()
         {
             return _bll.GetAll();
         }
@@ -101,9 +100,7 @@ namespace StarWars.WebApi.Controllers
         ///     <c><see langword="null">null</see></c> if the
         ///     <paramref name="character">character</paramref> was not added.
         /// </returns>
-        [HttpPost]
-        [Route("api/Characters")]
-        public CharacterModel Add([FromBody] CharacterModel character)
+        public CharacterModel Post([FromBody] CharacterModel character)
         {
             return _bll.Add(character);
         }

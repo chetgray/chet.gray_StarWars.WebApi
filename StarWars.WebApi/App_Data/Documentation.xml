@@ -570,7 +570,7 @@
                 <paramref name="character">character</paramref> was not added.
             </returns>
         </member>
-        <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAll">
+        <member name="M:StarWars.WebApi.Controllers.CharactersController.Get">
             <summary>Gets all <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s.</summary>
             <returns>
                 A <see cref="T:System.Collections.Generic.IEnumerable`1">collection</see> of all
@@ -624,7 +624,7 @@
                 <paramref name="trilogy">trilogy</paramref>.
             </returns>
         </member>
-        <member name="M:StarWars.WebApi.Controllers.CharactersController.Add(StarWars.WebApi.Models.CharacterModel)">
+        <member name="M:StarWars.WebApi.Controllers.CharactersController.Post(StarWars.WebApi.Models.CharacterModel)">
             <summary>
                 Adds a new <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see> to the collection.
             </summary>
