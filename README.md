@@ -9,16 +9,16 @@ Access
 >
 > - [x] Create a new StarWars database.
 >   - [ ] Within the database, create:
->     - [ ] New table: CharacterGeneralInfo
->       - [ ] Id
->       - [ ] Name
->       - [ ] Allegiance (Rebellion, Empire, None)
->       - [ ] IsJedi (True / False)
->       - [ ] Trilogy Introduced In Id - FOREIGN KEY to new
+>     - [x] New table: CharacterGeneralInfo
+>       - [x] Id
+>       - [x] Name
+>       - [x] Allegiance (Rebellion, Empire, None)
+>       - [x] IsJedi (True / False)
+>       - [x] Trilogy Introduced In Id - FOREIGN KEY to new
 >         TrilogyInformation table (see below).
->     - [ ] New Table: TrilogyInfo
->       - [ ] Id
->       - [ ] Trilogy Name (Original, Prequel, Sequel)
+>     - [x] New Table: TrilogyInfo
+>       - [x] Id
+>       - [x] Trilogy Name (Original, Prequel, Sequel)
 >     - [ ] New Stored Procedure: Get all Character Information
 >     - [ ] New Stored Procedure: Get Character Information by Name
 >     - [ ] New Stored Procedure: Get Character Information by
