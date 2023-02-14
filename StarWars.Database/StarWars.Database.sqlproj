@@ -57,13 +57,20 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="StarWars.Database.local.publish.xml" />
+    <None Include="StarWars.local.publish.xml" />
+    <None Include="Scripts\InsertLookupTableData.sql" />
+    <None Include="Scripts\InsertCharacterTestData.sql" />
+    <None Include="StarWars.Test.local.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Character.sql" />
     <Build Include="Tables\Trilogy.sql" />
     <Build Include="Tables\Allegiance.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

@@ -34,18 +34,18 @@ Access
 >         a new character. Instead, let them pass the trilogy name, then
 >         you look up the ID, then you use that ID to add to the
 >         Character table.
-> - [ ] Create SQL to INSERT new data into both tables (or just use the
+> - [x] Create SQL to INSERT new data into both tables (or just use the
 >   "Edit top 200 rows" in SSMS to add it. You can use the data below.
 >   Be sure to put the trilogy information in its separate table with an
 >   Id pointing to it from the main table (foreign key).
->   - [ ] 1, Luke Skywalker, Rebellion, True, Original
->   - [ ] 2, Obi-Wan Kenobi, Rebellion, True, Original
->   - [ ] 3, Jar Jar Binks, None, False, Prequel
->   - [ ] 4, Poe Dameron, Rebellion, False, Sequel
->   - [ ] 5, Finn, Rebellion, False, Sequel
->   - [ ] 6, Rey Skywalker, Rebellion, True, Sequel
->   - [ ] 7, C-3PO, Rebellion, False, Original
->   - [ ] 8, R2-D2, Rebellion, False, Original
+>   - [x] 1, Luke Skywalker, Rebellion, True, Original
+>   - [x] 2, Obi-Wan Kenobi, Rebellion, True, Original
+>   - [x] 3, Jar Jar Binks, None, False, Prequel
+>   - [x] 4, Poe Dameron, Rebellion, False, Sequel
+>   - [x] 5, Finn, Rebellion, False, Sequel
+>   - [x] 6, Rey Skywalker, Rebellion, True, Sequel
+>   - [x] 7, C-3PO, Rebellion, False, Original
+>   - [x] 8, R2-D2, Rebellion, False, Original
 > - [ ] Change your WebAPI to add Data Access as we discussed.
 >   - [ ] You'll want to have a new class library with a DataAccess
 >     namespace, a Repository namespace, and a DTOs namespace.
