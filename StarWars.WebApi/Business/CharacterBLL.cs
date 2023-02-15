@@ -137,14 +137,7 @@ namespace StarWars.WebApi.Business
         /// <inheritdoc/>
         public CharacterModel GetById(int id)
         {
-            try
-            {
-                return _characters[id];
-            }
-            catch (KeyNotFoundException)
-            {
-                return null;
-            }
+            return ConvertToModel(_repository.GetById(id));
         }
 
         /// <inheritdoc/>
@@ -208,6 +201,10 @@ namespace StarWars.WebApi.Business
 
         private CharacterModel ConvertToModel(CharacterDTO dto)
         {
+            if (dto == null)
+            {
+                return null;
+            }
             return new CharacterModel
             {
                 Id = dto.Id,

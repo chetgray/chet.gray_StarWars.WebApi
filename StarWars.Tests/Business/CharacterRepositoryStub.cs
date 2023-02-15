@@ -9,9 +9,14 @@ namespace StarWars.Tests.Business
     {
         public List<CharacterDTO> testDtos = new List<CharacterDTO>();
 
-        public List<CharacterDTO> GetAll()
+        public IEnumerable<CharacterDTO> GetAll()
         {
             return testDtos;
+        }
+
+        public CharacterDTO GetById(int id)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

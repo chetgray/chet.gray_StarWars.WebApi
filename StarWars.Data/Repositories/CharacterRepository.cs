@@ -34,13 +34,26 @@ namespace StarWars.Data.Repositories
             _dal = dal ?? throw new ArgumentNullException(nameof(dal));
         }
 
-        public List<CharacterDTO> GetAll()
+        public IEnumerable<CharacterDTO> GetAll()
         {
             DataTable table = _dal.GetTableFromStoredProcedure(
                 "spA_Character_GetAll",
                 new Dictionary<string, object>()
             );
             return ConvertManyToDtos(table);
+        }
+
+        public CharacterDTO GetById(int id)
+        {
+            DataTable table = _dal.GetTableFromStoredProcedure(
+                "spA_Character_GetById",
+                new Dictionary<string, object> { { "@CharacterId", id } }
+            );
+            if (table.Rows.Count == 0)
+            {
+                return null;
+            }
+            return ConvertToDto(table.Rows[0]);
         }
 
         private CharacterDTO ConvertToDto(DataRow row)
@@ -55,7 +68,7 @@ namespace StarWars.Data.Repositories
             };
         }
 
-        private List<CharacterDTO> ConvertManyToDtos(DataTable table)
+        private IEnumerable<CharacterDTO> ConvertManyToDtos(DataTable table)
         {
             List<CharacterDTO> dtos = new List<CharacterDTO>();
             foreach (DataRow row in table.Rows)
