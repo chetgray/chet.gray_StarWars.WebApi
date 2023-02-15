@@ -481,12 +481,6 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="F:StarWars.WebApi.Business.CharacterBLL._characters">
-            <summary>
-                The store of <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s.
-            </summary>
-            <remarks>The key should be the same as the <see cref="P:StarWars.WebApi.Models.CharacterModel.Id">ID</see></remarks>
-        </member>
         <member name="M:StarWars.WebApi.Business.CharacterBLL.#ctor">
             <summary>
                 Initializes a new <see cref="T:StarWars.WebApi.Business.CharacterBLL">CharacterBLL</see> instance with the default

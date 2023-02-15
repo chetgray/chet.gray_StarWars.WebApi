@@ -76,6 +76,7 @@
     <Build Include="Stored Procedures\spA_Character_GetAllByAllegianceId.sql" />
     <Build Include="Stored Procedures\spA_Character_GetAllByTrilogyId.sql" />
     <Build Include="Stored Procedures\spA_Character_Add.sql" />
+    <Build Include="Stored Procedures\spA_Character_GetAllJedi.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

@@ -51,6 +51,13 @@ namespace StarWars.Data.Repositories
         /// </returns>
         IEnumerable<CharacterDTO> GetAllByAllegianceId(int allegianceId);
 
+        /// <summary>Gets all <see cref="CharacterDTO">character</see>s that are Jedi.</summary>
+        /// <returns>
+        ///     A <see cref="IEnumerable{CharacterDTO}">collection</see> of all
+        ///     <see cref="CharacterDTO">character</see>s that are Jedi.
+        /// </returns>
+        IEnumerable<CharacterDTO> GetAllJedi();
+
         /// <summary>
         ///     Gets all <see cref="CharacterDTO">character</see>s that are introduced in the trilogy
         ///     with the specified <paramref name="trilogyId">trilogy ID</paramref>.

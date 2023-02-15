@@ -8,7 +8,7 @@ Access
 > Update your Star Wars Character API (US 211916) to add data access.
 >
 > - [x] Create a new StarWars database.
->   - [ ] Within the database, create:
+>   - [x] Within the database, create:
 >     - [x] New table: CharacterGeneralInfo
 >       - [x] Id
 >       - [x] Name
@@ -46,12 +46,12 @@ Access
 >   - [x] 6, Rey Skywalker, Rebellion, True, Sequel
 >   - [x] 7, C-3PO, Rebellion, False, Original
 >   - [x] 8, R2-D2, Rebellion, False, Original
-> - [ ] Change your WebAPI to add Data Access as we discussed.
->   - [ ] You'll want to have a new class library with a DataAccess
+> - [x] Change your WebAPI to add Data Access as we discussed.
+>   - [x] You'll want to have a new class library with a DataAccess
 >     namespace, a Repository namespace, and a DTOs namespace.
-> - [ ] Update the functionality of your API so that it does the
+> - [x] Update the functionality of your API so that it does the
 >   following:
-> - [ ] Your WebAPI should do the following:
+> - [x] Your WebAPI should do the following:
 >   - [x] Have a GET method to give a list of all the character
 >     information (get it from the DB)
 >   - [x] Have a GET method to get a character's information by their
@@ -62,11 +62,11 @@ Access
 >     trilogy (get it from the DB)
 >   - [x] Have a POST method that allows you to enter a new character
 >     (write it to the DB)
->   - [ ] \*\* Any methods from your older version of the app that were
+>   - [-] \*\* Any methods from your older version of the app that were
 >     hardcoded that aren't here, like getting character information
 >     where Jedi = True, can stay hardcoded. \*\*
 >   - [x] Have good XML documentation
-> - [ ] Thoroughly test this via Postman.
+> - [x] Thoroughly test this via Postman.
 
 User Story #211916: WebAPI: Create Star Wars Characters API
 -----------------------------------------------------------

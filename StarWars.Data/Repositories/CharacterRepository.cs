@@ -79,6 +79,15 @@ namespace StarWars.Data.Repositories
             return ConvertManyToDtos(table);
         }
 
+        public IEnumerable<CharacterDTO> GetAllJedi()
+        {
+            DataTable table = _dal.GetTableFromStoredProcedure(
+                "spA_Character_GetAllJedi",
+                new Dictionary<string, object>()
+            );
+            return ConvertManyToDtos(table);
+        }
+
         public IEnumerable<CharacterDTO> GetAllByTrilogyId(int trilogyId)
         {
             DataTable table = _dal.GetTableFromStoredProcedure(
