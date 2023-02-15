@@ -167,13 +167,9 @@ namespace StarWars.WebApi.Business
         }
 
         /// <inheritdoc/>
-        public IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy? trilogy)
+        public IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy trilogy)
         {
             List<CharacterModel> characters = new List<CharacterModel>();
-            if (trilogy is null)
-            {
-                return characters;
-            }
             foreach (CharacterModel character in _characters.Values)
             {
                 if (character.TrilogyIntroducedIn == trilogy)

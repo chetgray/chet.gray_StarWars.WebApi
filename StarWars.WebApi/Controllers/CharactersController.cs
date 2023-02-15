@@ -105,7 +105,11 @@ namespace StarWars.WebApi.Controllers
         [Route("api/Characters/AllByTrilogy/{trilogy}")]
         public IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy? trilogy)
         {
-            return _bll.GetAllByTrilogy(trilogy);
+            if (trilogy is null)
+            {
+                return new List<CharacterModel>();
+            }
+            return _bll.GetAllByTrilogy((Trilogy)trilogy);
         }
 
         // POST api/Characters

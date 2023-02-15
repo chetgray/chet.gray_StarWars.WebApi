@@ -70,7 +70,7 @@ namespace StarWars.WebApi.Business
         ///     <see cref="CharacterModel">character</see>s that are introduced in the specified
         ///     <paramref name="trilogy">trilogy</paramref>.
         /// </returns>
-        IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy? trilogy);
+        IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy trilogy);
 
         /// <summary>
         ///     Adds a new <see cref="CharacterModel">character</see> to the collection.

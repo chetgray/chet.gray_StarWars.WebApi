@@ -517,7 +517,7 @@
         <member name="M:StarWars.WebApi.Business.CharacterBLL.GetAllJedi">
             <inheritdoc/>
         </member>
-        <member name="M:StarWars.WebApi.Business.CharacterBLL.GetAllByTrilogy(System.Nullable{StarWars.WebApi.Models.Trilogy})">
+        <member name="M:StarWars.WebApi.Business.CharacterBLL.GetAllByTrilogy(StarWars.WebApi.Models.Trilogy)">
             <inheritdoc/>
         </member>
         <member name="M:StarWars.WebApi.Business.CharacterBLL.Add(StarWars.WebApi.Models.CharacterModel)">
@@ -575,7 +575,7 @@
                 <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s that are Jedi.
             </returns>
         </member>
-        <member name="M:StarWars.WebApi.Business.ICharacterBLL.GetAllByTrilogy(System.Nullable{StarWars.WebApi.Models.Trilogy})">
+        <member name="M:StarWars.WebApi.Business.ICharacterBLL.GetAllByTrilogy(StarWars.WebApi.Models.Trilogy)">
             <summary>
                 Gets all <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s that are introduced in the
                 specified <paramref name="trilogy">trilogy</paramref>.
