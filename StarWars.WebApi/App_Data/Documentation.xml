@@ -511,6 +511,9 @@
         <member name="M:StarWars.WebApi.Business.CharacterBLL.GetOneByName(System.String)">
             <inheritdoc/>
         </member>
+        <member name="M:StarWars.WebApi.Business.CharacterBLL.GetAllByAllegiance(StarWars.WebApi.Models.Allegiance)">
+            <inheritdoc/>
+        </member>
         <member name="M:StarWars.WebApi.Business.CharacterBLL.GetAllJedi">
             <inheritdoc/>
         </member>
@@ -549,6 +552,20 @@
                 The first <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see> with the specified
                 <paramref name="name">name</paramref>, or <c><see langword="null">null</see></c> if none
                 is found.
+            </returns>
+        </member>
+        <member name="M:StarWars.WebApi.Business.ICharacterBLL.GetAllByAllegiance(StarWars.WebApi.Models.Allegiance)">
+            <summary>
+               Gets all <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s with the specified
+               <paramref name="allegiance">allegiance</paramref>.
+            </summary>
+            <param name="allegiance">
+                The <see cref="P:StarWars.WebApi.Models.CharacterModel.Allegiance">allegiance</see> to filter for.
+            </param>
+            <returns>
+                A <see cref="T:System.Collections.Generic.IEnumerable`1">collection</see> of all
+                <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s with the specified
+                <paramref name="allegiance">allegiance</paramref>.
             </returns>
         </member>
         <member name="M:StarWars.WebApi.Business.ICharacterBLL.GetAllJedi">
@@ -606,6 +623,9 @@
         </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.GetByName(System.String)">
             <inheritdoc cref="M:StarWars.WebApi.Business.CharacterBLL.GetOneByName(System.String)"/>
+        </member>
+        <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAllByAllegiance(System.Nullable{StarWars.WebApi.Models.Allegiance})">
+            <inheritdoc cref="M:StarWars.WebApi.Business.CharacterBLL.GetAllByAllegiance(StarWars.WebApi.Models.Allegiance)"/>
         </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAllegianceByName(System.String)">
             <summary>

@@ -36,5 +36,19 @@ namespace StarWars.Data.Repositories
         ///     is found.
         /// </returns>
         CharacterDTO GetOneByName(string name);
+
+        /// <summary>
+        ///    Gets all <see cref="CharacterDTO">character</see>s with the specified
+        ///    <paramref name="allegianceId">allegiance ID</paramref>.
+        /// </summary>
+        /// <param name="allegianceId">
+        ///     The (<see cref="int">int</see>) allegiance ID to filter for.
+        /// </param>
+        /// <returns>
+        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
+        ///     <see cref="CharacterDTO">character</see>s with the specified
+        ///     <paramref name="allegiance">allegiance ID</paramref>.
+        /// </returns>
+        IEnumerable<CharacterDTO> GetAllByAllegianceId(int allegianceId);
     }
 }

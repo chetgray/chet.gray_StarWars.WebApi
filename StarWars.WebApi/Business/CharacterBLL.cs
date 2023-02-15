@@ -147,6 +147,12 @@ namespace StarWars.WebApi.Business
         }
 
         /// <inheritdoc/>
+        public IEnumerable<CharacterModel> GetAllByAllegiance(Allegiance allegiance)
+        {
+            return ConvertManyToModels(_repository.GetAllByAllegianceId((int)allegiance));
+        }
+
+        /// <inheritdoc/>
         public IEnumerable<CharacterModel> GetAllJedi()
         {
             List<CharacterModel> jedi = new List<CharacterModel>();

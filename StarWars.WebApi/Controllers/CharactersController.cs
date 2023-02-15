@@ -46,6 +46,18 @@ namespace StarWars.WebApi.Controllers
             return _bll.GetOneByName(name);
         }
 
+        // GET api/Characters/AllByAllegiance/{allegiance}
+        /// <inheritdoc cref="CharacterBLL.GetAllByAllegiance(Allegiance)"/>
+        [Route("api/Characters/AllByAllegiance/{allegiance}")]
+        public IEnumerable<CharacterModel> GetAllByAllegiance(Allegiance? allegiance)
+        {
+            if (allegiance is null)
+            {
+                return new List<CharacterModel>();
+            }
+            return _bll.GetAllByAllegiance((Allegiance)allegiance);
+        }
+
         // GET api/Characters/AllegianceByName/{name}
         /// <summary>
         ///     Gets the <see cref="CharacterModel.Allegiance">allegiance</see> of the first

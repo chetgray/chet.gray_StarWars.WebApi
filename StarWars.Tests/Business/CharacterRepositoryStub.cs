@@ -23,5 +23,10 @@ namespace StarWars.Tests.Business
         {
             throw new System.NotImplementedException();
         }
+
+        public IEnumerable<CharacterDTO> GetAllByAllegianceId(int allegianceId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -21,7 +21,7 @@ Access
 >       - [x] Trilogy Name (Original, Prequel, Sequel)
 >     - [x] New Stored Procedure: Get all Character Information
 >     - [x] New Stored Procedure: Get Character Information by Name
->     - [ ] New Stored Procedure: Get Character Information by
+>     - [x] New Stored Procedure: Get Character Information by
 >       Allegiance
 >     - [ ] New Stored Procedure: Get Character Information by Trilogy
 >       - [ ] Be sure all your stored procs appropriately JOIN your 2
@@ -56,7 +56,7 @@ Access
 >     information (get it from the DB)
 >   - [x] Have a GET method to get a character's information by their
 >     name (get it from the DB)
->   - [ ] Have a GET method to get a list of character information by
+>   - [x] Have a GET method to get a list of character information by
 >     allegiance (get it from the DB)
 >   - [ ] Have a GET method to get a list of character information by
 >     trilogy (get it from the DB)
