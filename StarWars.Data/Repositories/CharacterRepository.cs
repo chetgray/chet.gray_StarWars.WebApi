@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 
 using StarWars.Data.DataAccess;
 using StarWars.Data.DTOs;
@@ -85,6 +86,33 @@ namespace StarWars.Data.Repositories
                 new Dictionary<string, object> { { "@CharacterTrilogyId", trilogyId } }
             );
             return ConvertManyToDtos(table);
+        }
+
+        public CharacterDTO Add(CharacterDTO dto)
+        {
+            DataTable table;
+            try
+            {
+                table = _dal.GetTableFromStoredProcedure(
+                    "spA_Character_Add",
+                    new Dictionary<string, object>
+                    {
+                    { "@CharacterName", dto.Name },
+                    { "@CharacterAllegianceId", dto.AllegianceId },
+                    { "@CharacterIsJedi", dto.IsJedi },
+                    { "@CharacterTrilogyIntroducedInId", dto.TrilogyIntroducedInId },
+                    }
+                );
+            }
+            catch (SqlException)
+            {
+                return null;
+            }
+            if (table.Rows.Count == 0)
+            {
+                return null;
+            }
+            return ConvertToDto(table.Rows[0]);
         }
 
         private CharacterDTO ConvertToDto(DataRow row)

@@ -64,5 +64,18 @@ namespace StarWars.Data.Repositories
         ///     specified <paramref name="trilogyId">trilogy ID</paramref>.
         /// </returns>
         IEnumerable<CharacterDTO> GetAllByTrilogyId(int trilogyId);
+
+        /// <summary>
+        ///     Adds a new <see cref="CharacterDTO">character</see> to the collection.
+        /// </summary>
+        /// <param name="dto">
+        ///     The <see cref="CharacterDTO">character</see> to add to the collection.
+        /// </param>
+        /// <returns>
+        ///     The <see cref="CharacterDTO">character</see> that was added to the collection, or
+        ///     <c><see langword="null">null</see></c> if the
+        ///     <paramref name="dto">character</paramref> was not added.
+        /// </returns>
+        CharacterDTO Add(CharacterDTO dto);
     }
 }

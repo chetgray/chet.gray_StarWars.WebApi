@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 using StarWars.Data.DTOs;
 using StarWars.Data.Repositories;
@@ -173,17 +172,25 @@ namespace StarWars.WebApi.Business
         }
 
         /// <inheritdoc/>
-        public CharacterModel Add(CharacterModel character)
+        public CharacterModel Add(CharacterModel model)
         {
-            try
-            {
-                _characters.Add(character.Id, character);
-            }
-            catch (ArgumentException)
+            return ConvertToModel(_repository.Add(ConvertToDto(model)));
+        }
+
+        private CharacterDTO ConvertToDto(CharacterModel model)
+        {
+            if (model == null)
             {
                 return null;
             }
-            return GetById(character.Id);
+            return new CharacterDTO
+            {
+                Id = model.Id,
+                Name = model.Name,
+                AllegianceId = (int)model.Allegiance,
+                IsJedi = model.IsJedi,
+                TrilogyIntroducedInId = (int)model.TrilogyIntroducedIn,
+            };
         }
 
         private CharacterModel ConvertToModel(CharacterDTO dto)

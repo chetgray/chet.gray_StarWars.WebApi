@@ -93,6 +93,10 @@ namespace StarWars.WebApi.Controllers
         /// <inheritdoc cref="ICharacterBLL.Add(CharacterModel)"/>
         public CharacterModel Post([FromBody] CharacterModel character)
         {
+            if (character is null)
+            {
+                return null;
+            }
             return _bll.Add(character);
         }
     }

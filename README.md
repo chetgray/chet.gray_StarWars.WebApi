@@ -26,9 +26,9 @@ Access
 >     - [x] New Stored Procedure: Get Character Information by Trilogy
 >       - [-] Be sure all your stored procs appropriately JOIN your 2
 >         tables to get all your information!
->     - [ ] New Stored Procedure: INSERT new character information into
+>     - [x] New Stored Procedure: INSERT new character information into
 >       the CharacterGeneralInfo table
->       - [ ] Hint: You may also need a stored proc to get the Trilogy
+>       - [-] Hint: You may also need a stored proc to get the Trilogy
 >         ID by Name, so you don't have to make the API caller pass the
 >         Trilogy ID (it's not realistic that they'll know that) to add
 >         a new character. Instead, let them pass the trilogy name, then
@@ -60,7 +60,7 @@ Access
 >     allegiance (get it from the DB)
 >   - [x] Have a GET method to get a list of character information by
 >     trilogy (get it from the DB)
->   - [ ] Have a POST method that allows you to enter a new character
+>   - [x] Have a POST method that allows you to enter a new character
 >     (write it to the DB)
 >   - [ ] \*\* Any methods from your older version of the app that were
 >     hardcoded that aren't here, like getting character information

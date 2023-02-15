@@ -33,5 +33,10 @@ namespace StarWars.Tests.Business
         {
             throw new System.NotImplementedException();
         }
+
+        public CharacterDTO Add(CharacterDTO dto)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
