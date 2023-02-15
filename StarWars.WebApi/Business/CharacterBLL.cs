@@ -169,15 +169,7 @@ namespace StarWars.WebApi.Business
         /// <inheritdoc/>
         public IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy trilogy)
         {
-            List<CharacterModel> characters = new List<CharacterModel>();
-            foreach (CharacterModel character in _characters.Values)
-            {
-                if (character.TrilogyIntroducedIn == trilogy)
-                {
-                    characters.Add(character);
-                }
-            }
-            return characters;
+            return ConvertManyToModels(_repository.GetAllByTrilogyId((int)trilogy));
         }
 
         /// <inheritdoc/>

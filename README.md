@@ -23,8 +23,8 @@ Access
 >     - [x] New Stored Procedure: Get Character Information by Name
 >     - [x] New Stored Procedure: Get Character Information by
 >       Allegiance
->     - [ ] New Stored Procedure: Get Character Information by Trilogy
->       - [ ] Be sure all your stored procs appropriately JOIN your 2
+>     - [x] New Stored Procedure: Get Character Information by Trilogy
+>       - [-] Be sure all your stored procs appropriately JOIN your 2
 >         tables to get all your information!
 >     - [ ] New Stored Procedure: INSERT new character information into
 >       the CharacterGeneralInfo table
@@ -58,7 +58,7 @@ Access
 >     name (get it from the DB)
 >   - [x] Have a GET method to get a list of character information by
 >     allegiance (get it from the DB)
->   - [ ] Have a GET method to get a list of character information by
+>   - [x] Have a GET method to get a list of character information by
 >     trilogy (get it from the DB)
 >   - [ ] Have a POST method that allows you to enter a new character
 >     (write it to the DB)

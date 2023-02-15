@@ -28,5 +28,10 @@ namespace StarWars.Tests.Business
         {
             throw new System.NotImplementedException();
         }
+
+        public IEnumerable<CharacterDTO> GetAllByTrilogyId(int trilogyId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

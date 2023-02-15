@@ -42,7 +42,7 @@ namespace StarWars.Data.Repositories
         ///    <paramref name="allegianceId">allegiance ID</paramref>.
         /// </summary>
         /// <param name="allegianceId">
-        ///     The (<see cref="int">int</see>) allegiance ID to filter for.
+        ///     The <see cref="CharacterDTO.AllegianceId">allegiance ID</see> to filter for.
         /// </param>
         /// <returns>
         ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
@@ -50,5 +50,19 @@ namespace StarWars.Data.Repositories
         ///     <paramref name="allegiance">allegiance ID</paramref>.
         /// </returns>
         IEnumerable<CharacterDTO> GetAllByAllegianceId(int allegianceId);
+
+        /// <summary>
+        ///     Gets all <see cref="CharacterDTO">character</see>s that are introduced in the trilogy
+        ///     with the specified <paramref name="trilogyId">trilogy ID</paramref>.
+        /// </summary>
+        /// <param name="trilogyId">
+        ///     The <see cref="CharacterDTO.TrilogyIntroducedInId">trilogy ID</see> to filter for.
+        /// </param>
+        /// <returns>
+        ///     A <see cref="IEnumerable{CharacterDTO}">collection</see> of all
+        ///     <see cref="CharacterDTO">character</see>s that are introduced in the trilogy with the
+        ///     specified <paramref name="trilogyId">trilogy ID</paramref>.
+        /// </returns>
+        IEnumerable<CharacterDTO> GetAllByTrilogyId(int trilogyId);
     }
 }
