@@ -38,6 +38,14 @@ namespace StarWars.WebApi.Controllers
             return _bll.GetById(id);
         }
 
+        // GET api/Characters/ByName/{name}
+        /// <inheritdoc cref="CharacterBLL.GetOneByName(string)"/>
+        [Route("api/Characters/ByName/{name}")]
+        public CharacterModel GetByName(string name)
+        {
+            return _bll.GetOneByName(name);
+        }
+
         // GET api/Characters/AllegianceByName/{name}
         /// <summary>
         ///     Gets the <see cref="CharacterModel.Allegiance">allegiance</see> of the first

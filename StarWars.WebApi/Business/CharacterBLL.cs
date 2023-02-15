@@ -143,14 +143,7 @@ namespace StarWars.WebApi.Business
         /// <inheritdoc/>
         public CharacterModel GetOneByName(string name)
         {
-            foreach (CharacterModel character in _characters.Values)
-            {
-                if (character.Name == name)
-                {
-                    return character;
-                }
-            }
-            return null;
+            return ConvertToModel(_repository.GetOneByName(name));
         }
 
         /// <inheritdoc/>

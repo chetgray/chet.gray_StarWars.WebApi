@@ -18,5 +18,10 @@ namespace StarWars.Tests.Business
         {
             throw new System.NotImplementedException();
         }
+
+        public CharacterDTO GetOneByName(string name)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

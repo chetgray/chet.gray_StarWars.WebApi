@@ -72,6 +72,7 @@
     <Build Include="Tables\Allegiance.sql" />
     <Build Include="Stored Procedures\spA_Character_GetAll.sql" />
     <Build Include="Stored Procedures\spA_Character_GetById.sql" />
+    <Build Include="Stored Procedures\spA_Character_GetAllByName.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

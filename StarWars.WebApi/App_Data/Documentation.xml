@@ -604,6 +604,9 @@
                 exists.
             </returns>
         </member>
+        <member name="M:StarWars.WebApi.Controllers.CharactersController.GetByName(System.String)">
+            <inheritdoc cref="M:StarWars.WebApi.Business.CharacterBLL.GetOneByName(System.String)"/>
+        </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAllegianceByName(System.String)">
             <summary>
                 Gets the <see cref="P:StarWars.WebApi.Models.CharacterModel.Allegiance">allegiance</see> of the first

@@ -24,5 +24,17 @@ namespace StarWars.Data.Repositories
         ///     exists.
         /// </returns>
         CharacterDTO GetById(int id);
+
+        /// <summary>
+        ///     Gets the first <see cref="CharacterDTO">character</see> with the specified
+        ///     <paramref name="name">name</paramref>.
+        /// </summary>
+        /// <param name="name">The <see cref="CharacterDTO.Name">name</see> to filter for.</param>
+        /// <returns>
+        ///     The first <see cref="CharacterDTO">character</see> with the specified
+        ///     <paramref name="name">name</paramref>, or <c><see langword="null">null</see></c> if none
+        ///     is found.
+        /// </returns>
+        CharacterDTO GetOneByName(string name);
     }
 }

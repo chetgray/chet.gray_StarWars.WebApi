@@ -56,6 +56,19 @@ namespace StarWars.Data.Repositories
             return ConvertToDto(table.Rows[0]);
         }
 
+        public CharacterDTO GetOneByName(string name)
+        {
+            DataTable table = _dal.GetTableFromStoredProcedure(
+                "spA_Character_GetAllByName",
+                new Dictionary<string, object> { { "@CharacterName", name } }
+            );
+            if (table.Rows.Count == 0)
+            {
+                return null;
+            }
+            return ConvertToDto(table.Rows[0]);
+        }
+
         private CharacterDTO ConvertToDto(DataRow row)
         {
             return new CharacterDTO()
