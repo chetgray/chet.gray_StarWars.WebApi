@@ -603,29 +603,16 @@
             </returns>
         </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.Get">
-            <summary>Gets all <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s.</summary>
-            <returns>
-                A <see cref="T:System.Collections.Generic.IEnumerable`1">collection</see> of all
-                <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s.
-            </returns>
+            <inheritdoc cref="M:StarWars.WebApi.Business.ICharacterBLL.GetAll"/>
         </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.GetById(System.Int32)">
-            <summary>
-                Gets the <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see> with the specified
-                <paramref name="id">ID</paramref>.
-            </summary>
-            <param name="id">The <see cref="P:StarWars.WebApi.Models.CharacterModel.Id">ID</see> to filter for.</param>
-            <returns>
-                The <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see> with the specified
-                <paramref name="id">ID</paramref>, or <c><see langword="null">null</see></c> if none
-                exists.
-            </returns>
+            <inheritdoc cref="M:StarWars.WebApi.Business.ICharacterBLL.GetById(System.Int32)"/>
         </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.GetByName(System.String)">
-            <inheritdoc cref="M:StarWars.WebApi.Business.CharacterBLL.GetOneByName(System.String)"/>
+            <inheritdoc cref="M:StarWars.WebApi.Business.ICharacterBLL.GetOneByName(System.String)"/>
         </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAllByAllegiance(System.Nullable{StarWars.WebApi.Models.Allegiance})">
-            <inheritdoc cref="M:StarWars.WebApi.Business.CharacterBLL.GetAllByAllegiance(StarWars.WebApi.Models.Allegiance)"/>
+            <inheritdoc cref="M:StarWars.WebApi.Business.ICharacterBLL.GetAllByAllegiance(StarWars.WebApi.Models.Allegiance)"/>
         </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAllegianceByName(System.String)">
             <summary>
@@ -642,20 +629,10 @@
             </returns>
         </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAllJedi">
-            <summary>Gets all <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s that are Jedi.</summary>
-            <returns>
-                A <see cref="T:System.Collections.Generic.IEnumerable`1">collection</see> of all
-                <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s that are Jedi.
-            </returns>
+            <inheritdoc cref="M:StarWars.WebApi.Business.ICharacterBLL.GetAllJedi"/>
         </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.GetAllByTrilogy(System.Nullable{StarWars.WebApi.Models.Trilogy})">
-            <summary>
-                Gets all <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s that are introduced in the
-                specified <paramref name="trilogy">trilogy</paramref>.
-            </summary>
-            <param name="trilogy">
-                The <see cref="P:StarWars.WebApi.Models.CharacterModel.TrilogyIntroducedIn">trilogy</see> to filter for.
-            </param>
+            <inheritdoc cref="M:StarWars.WebApi.Business.ICharacterBLL.GetAllByTrilogy(StarWars.WebApi.Models.Trilogy)"/>
             <returns>
                 A <see cref="T:System.Collections.Generic.IEnumerable`1">collection</see> of all
                 <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see>s that are introduced in the specified
@@ -663,17 +640,7 @@
             </returns>
         </member>
         <member name="M:StarWars.WebApi.Controllers.CharactersController.Post(StarWars.WebApi.Models.CharacterModel)">
-            <summary>
-                Adds a new <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see> to the collection.
-            </summary>
-            <param name="character">
-                The <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see> to add to the collection.
-            </param>
-            <returns>
-                The <see cref="T:StarWars.WebApi.Models.CharacterModel">character</see> that was added to the collection, or
-                <c><see langword="null">null</see></c> if the
-                <paramref name="character">character</paramref> was not added.
-            </returns>
+            <inheritdoc cref="M:StarWars.WebApi.Business.ICharacterBLL.Add(StarWars.WebApi.Models.CharacterModel)"/>
         </member>
     </members>
 </doc>

@@ -11,27 +11,14 @@ namespace StarWars.WebApi.Controllers
         private ICharacterBLL _bll = new CharacterBLL();
 
         // GET api/Characters
-        /// <summary>Gets all <see cref="CharacterModel">character</see>s.</summary>
-        /// <returns>
-        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
-        ///     <see cref="CharacterModel">character</see>s.
-        /// </returns>
+        /// <inheritdoc cref="ICharacterBLL.GetAll"/>
         public IEnumerable<CharacterModel> Get()
         {
             return _bll.GetAll();
         }
 
         // GET api/Characters/ById/{id}
-        /// <summary>
-        ///     Gets the <see cref="CharacterModel">character</see> with the specified
-        ///     <paramref name="id">ID</paramref>.
-        /// </summary>
-        /// <param name="id">The <see cref="CharacterModel.Id">ID</see> to filter for.</param>
-        /// <returns>
-        ///     The <see cref="CharacterModel">character</see> with the specified
-        ///     <paramref name="id">ID</paramref>, or <c><see langword="null">null</see></c> if none
-        ///     exists.
-        /// </returns>
+        /// <inheritdoc cref="ICharacterBLL.GetById(int)"/>
         [Route("api/Characters/ById/{id}")]
         public CharacterModel GetById(int id)
         {
@@ -39,7 +26,7 @@ namespace StarWars.WebApi.Controllers
         }
 
         // GET api/Characters/ByName/{name}
-        /// <inheritdoc cref="CharacterBLL.GetOneByName(string)"/>
+        /// <inheritdoc cref="ICharacterBLL.GetOneByName(string)"/>
         [Route("api/Characters/ByName/{name}")]
         public CharacterModel GetByName(string name)
         {
@@ -47,7 +34,7 @@ namespace StarWars.WebApi.Controllers
         }
 
         // GET api/Characters/AllByAllegiance/{allegiance}
-        /// <inheritdoc cref="CharacterBLL.GetAllByAllegiance(Allegiance)"/>
+        /// <inheritdoc cref="ICharacterBLL.GetAllByAllegiance(Allegiance)"/>
         [Route("api/Characters/AllByAllegiance/{allegiance}")]
         public IEnumerable<CharacterModel> GetAllByAllegiance(Allegiance? allegiance)
         {
@@ -78,11 +65,7 @@ namespace StarWars.WebApi.Controllers
         }
 
         // GET api/Characters/AllJedi
-        /// <summary>Gets all <see cref="CharacterModel">character</see>s that are Jedi.</summary>
-        /// <returns>
-        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
-        ///     <see cref="CharacterModel">character</see>s that are Jedi.
-        /// </returns>
+        /// <inheritdoc cref="ICharacterBLL.GetAllJedi"/>
         [Route("api/Characters/AllJedi")]
         public IEnumerable<CharacterModel> GetAllJedi()
         {
@@ -90,13 +73,7 @@ namespace StarWars.WebApi.Controllers
         }
 
         // GET api/Characters/AllByTrilogy/{trilogy}
-        /// <summary>
-        ///     Gets all <see cref="CharacterModel">character</see>s that are introduced in the
-        ///     specified <paramref name="trilogy">trilogy</paramref>.
-        /// </summary>
-        /// <param name="trilogy">
-        ///     The <see cref="CharacterModel.TrilogyIntroducedIn">trilogy</see> to filter for.
-        /// </param>
+        /// <inheritdoc cref="ICharacterBLL.GetAllByTrilogy(Trilogy)"/>
         /// <returns>
         ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
         ///     <see cref="CharacterModel">character</see>s that are introduced in the specified
@@ -113,17 +90,7 @@ namespace StarWars.WebApi.Controllers
         }
 
         // POST api/Characters
-        /// <summary>
-        ///     Adds a new <see cref="CharacterModel">character</see> to the collection.
-        /// </summary>
-        /// <param name="character">
-        ///     The <see cref="CharacterModel">character</see> to add to the collection.
-        /// </param>
-        /// <returns>
-        ///     The <see cref="CharacterModel">character</see> that was added to the collection, or
-        ///     <c><see langword="null">null</see></c> if the
-        ///     <paramref name="character">character</paramref> was not added.
-        /// </returns>
+        /// <inheritdoc cref="ICharacterBLL.Add(CharacterModel)"/>
         public CharacterModel Post([FromBody] CharacterModel character)
         {
             return _bll.Add(character);

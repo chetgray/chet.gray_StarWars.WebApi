@@ -65,7 +65,7 @@ Access
 >   - [ ] \*\* Any methods from your older version of the app that were
 >     hardcoded that aren't here, like getting character information
 >     where Jedi = True, can stay hardcoded. \*\*
->   - [ ] Have good XML documentation
+>   - [x] Have good XML documentation
 > - [ ] Thoroughly test this via Postman.
 
 User Story #211916: WebAPI: Create Star Wars Characters API
