@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using StarWars.Data.DTOs;
+using StarWars.Data.Repositories;
 using StarWars.WebApi.Models;
 
 namespace StarWars.WebApi.Business
 {
     public class CharacterBLL : ICharacterBLL
     {
+        private readonly ICharacterRepository _repository;
+
         /// <summary>
         ///     The store of <see cref="CharacterModel">character</see>s.
         /// </summary>
@@ -106,10 +110,28 @@ namespace StarWars.WebApi.Business
             },
         };
 
+        /// <summary>
+        ///     Initializes a new <see cref="CharacterBLL">CharacterBLL</see> instance with the default
+        ///     <see cref="CharacterRepository">repository</see> backend.
+        /// </summary>
+        public CharacterBLL() : this(new CharacterRepository()) { }
+
+        /// <summary>
+        ///     Initializes a new <see cref="CharacterBLL">CharacterBLL</see> instance with the passed
+        ///     <paramref name="repository">repository</paramref> as the backend.
+        /// </summary>
+        /// <param name="repository">
+        ///     The <see cref="ICharacterRepository">repository</see> to use as the backend.
+        /// </param>
+        public CharacterBLL(ICharacterRepository repository)
+        {
+            _repository = repository;
+        }
+
         /// <inheritdoc/>
         public IEnumerable<CharacterModel> GetAll()
         {
-            return _characters.Values;
+            return ConvertManyToModels(_repository.GetAll());
         }
 
         /// <inheritdoc/>
@@ -182,6 +204,30 @@ namespace StarWars.WebApi.Business
                 return null;
             }
             return GetById(character.Id);
+        }
+
+        private CharacterModel ConvertToModel(CharacterDTO dto)
+        {
+            return new CharacterModel
+            {
+                Id = dto.Id,
+                Name = dto.Name,
+                Allegiance = (Allegiance)dto.AllegianceId,
+                IsJedi = dto.IsJedi,
+                TrilogyIntroducedIn = (Trilogy)dto.TrilogyIntroducedInId,
+            };
+        }
+
+        private IEnumerable<CharacterModel> ConvertManyToModels(
+            IEnumerable<CharacterDTO> characterDTOs
+        )
+        {
+            List<CharacterModel> models = new List<CharacterModel>();
+            foreach (CharacterDTO dto in characterDTOs)
+            {
+                models.Add(ConvertToModel(dto));
+            }
+            return models;
         }
     }
 }

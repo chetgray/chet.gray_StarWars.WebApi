@@ -58,6 +58,7 @@
     <Folder Include="Properties" />
     <Folder Include="Tables" />
     <Folder Include="Scripts" />
+    <Folder Include="Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <None Include="StarWars.local.publish.xml" />
@@ -69,6 +70,7 @@
     <Build Include="Tables\Character.sql" />
     <Build Include="Tables\Trilogy.sql" />
     <Build Include="Tables\Allegiance.sql" />
+    <Build Include="Stored Procedures\spA_Character_GetAll.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

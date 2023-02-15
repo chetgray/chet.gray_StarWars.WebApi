@@ -19,7 +19,7 @@ Access
 >     - [x] New Table: TrilogyInfo
 >       - [x] Id
 >       - [x] Trilogy Name (Original, Prequel, Sequel)
->     - [ ] New Stored Procedure: Get all Character Information
+>     - [x] New Stored Procedure: Get all Character Information
 >     - [ ] New Stored Procedure: Get Character Information by Name
 >     - [ ] New Stored Procedure: Get Character Information by
 >       Allegiance
@@ -52,7 +52,7 @@ Access
 > - [ ] Update the functionality of your API so that it does the
 >   following:
 > - [ ] Your WebAPI should do the following:
->   - [ ] Have a GET method to give a list of all the character
+>   - [x] Have a GET method to give a list of all the character
 >     information (get it from the DB)
 >   - [ ] Have a GET method to get a character's information by their
 >     name (get it from the DB)

@@ -487,6 +487,21 @@
             </summary>
             <remarks>The key should be the same as the <see cref="P:StarWars.WebApi.Models.CharacterModel.Id">ID</see></remarks>
         </member>
+        <member name="M:StarWars.WebApi.Business.CharacterBLL.#ctor">
+            <summary>
+                Initializes a new <see cref="T:StarWars.WebApi.Business.CharacterBLL">CharacterBLL</see> instance with the default
+                <see cref="T:StarWars.Data.Repositories.CharacterRepository">repository</see> backend.
+            </summary>
+        </member>
+        <member name="M:StarWars.WebApi.Business.CharacterBLL.#ctor(StarWars.Data.Repositories.ICharacterRepository)">
+            <summary>
+                Initializes a new <see cref="T:StarWars.WebApi.Business.CharacterBLL">CharacterBLL</see> instance with the passed
+                <paramref name="repository">repository</paramref> as the backend.
+            </summary>
+            <param name="repository">
+                The <see cref="T:StarWars.Data.Repositories.ICharacterRepository">repository</see> to use as the backend.
+            </param>
+        </member>
         <member name="M:StarWars.WebApi.Business.CharacterBLL.GetAll">
             <inheritdoc/>
         </member>
