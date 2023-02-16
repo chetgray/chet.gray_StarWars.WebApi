@@ -10,6 +10,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "StarWars.Database", "StarWars.Database\StarWars.Database.sqlproj", "{2E46640E-309B-4E07-84FF-55EAABE098D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Data", "StarWars.Data\StarWars.Data.csproj", "{0693B837-F796-492C-95E7-6353407D19E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Tests", "StarWars.Tests\StarWars.Tests.csproj", "{A6AE5EB7-1534-4505-ACE8-5DB79ED19524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +26,20 @@ Global
 		{75664520-DC6E-48E9-9165-E7DE3762E7ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75664520-DC6E-48E9-9165-E7DE3762E7ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75664520-DC6E-48E9-9165-E7DE3762E7ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E46640E-309B-4E07-84FF-55EAABE098D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E46640E-309B-4E07-84FF-55EAABE098D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E46640E-309B-4E07-84FF-55EAABE098D7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2E46640E-309B-4E07-84FF-55EAABE098D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E46640E-309B-4E07-84FF-55EAABE098D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E46640E-309B-4E07-84FF-55EAABE098D7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0693B837-F796-492C-95E7-6353407D19E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0693B837-F796-492C-95E7-6353407D19E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0693B837-F796-492C-95E7-6353407D19E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0693B837-F796-492C-95E7-6353407D19E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6AE5EB7-1534-4505-ACE8-5DB79ED19524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6AE5EB7-1534-4505-ACE8-5DB79ED19524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6AE5EB7-1534-4505-ACE8-5DB79ED19524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6AE5EB7-1534-4505-ACE8-5DB79ED19524}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

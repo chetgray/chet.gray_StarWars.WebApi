@@ -37,6 +37,20 @@ namespace StarWars.WebApi.Business
         /// </returns>
         CharacterModel GetOneByName(string name);
 
+        /// <summary>
+        ///    Gets all <see cref="CharacterModel">character</see>s with the specified
+        ///    <paramref name="allegiance">allegiance</paramref>.
+        /// </summary>
+        /// <param name="allegiance">
+        ///     The <see cref="CharacterModel.Allegiance">allegiance</see> to filter for.
+        /// </param>
+        /// <returns>
+        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
+        ///     <see cref="CharacterModel">character</see>s with the specified
+        ///     <paramref name="allegiance">allegiance</paramref>.
+        /// </returns>
+        IEnumerable<CharacterModel> GetAllByAllegiance(Allegiance allegiance);
+
         /// <summary>Gets all <see cref="CharacterModel">character</see>s that are Jedi.</summary>
         /// <returns>
         ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
@@ -56,7 +70,7 @@ namespace StarWars.WebApi.Business
         ///     <see cref="CharacterModel">character</see>s that are introduced in the specified
         ///     <paramref name="trilogy">trilogy</paramref>.
         /// </returns>
-        IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy? trilogy);
+        IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy trilogy);
 
         /// <summary>
         ///     Adds a new <see cref="CharacterModel">character</see> to the collection.
