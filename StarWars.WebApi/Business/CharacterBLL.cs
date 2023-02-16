@@ -31,43 +31,50 @@ namespace StarWars.WebApi.Business
         /// <inheritdoc/>
         public IEnumerable<CharacterModel> GetAll()
         {
-            return ConvertManyToModels(_repository.GetAll());
+            IEnumerable<CharacterDTO> dtos = _repository.GetAll();
+            return ConvertManyToModels(dtos);
         }
 
         /// <inheritdoc/>
         public CharacterModel GetById(int id)
         {
-            return ConvertToModel(_repository.GetById(id));
+            CharacterDTO dto = _repository.GetById(id);
+            return ConvertToModel(dto);
         }
 
         /// <inheritdoc/>
         public CharacterModel GetOneByName(string name)
         {
-            return ConvertToModel(_repository.GetOneByName(name));
+            CharacterDTO dto = _repository.GetOneByName(name);
+            return ConvertToModel(dto);
         }
 
         /// <inheritdoc/>
         public IEnumerable<CharacterModel> GetAllByAllegiance(Allegiance allegiance)
         {
-            return ConvertManyToModels(_repository.GetAllByAllegianceId((int)allegiance));
+            IEnumerable<CharacterDTO> dtos = _repository.GetAllByAllegianceId((int)allegiance);
+            return ConvertManyToModels(dtos);
         }
 
         /// <inheritdoc/>
         public IEnumerable<CharacterModel> GetAllJedi()
         {
-            return ConvertManyToModels(_repository.GetAllJedi());
+            IEnumerable<CharacterDTO> dtos = _repository.GetAllJedi();
+            return ConvertManyToModels(dtos);
         }
 
         /// <inheritdoc/>
         public IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy trilogy)
         {
-            return ConvertManyToModels(_repository.GetAllByTrilogyId((int)trilogy));
+            IEnumerable<CharacterDTO> dtos = _repository.GetAllByTrilogyId((int)trilogy);
+            return ConvertManyToModels(dtos);
         }
 
         /// <inheritdoc/>
         public CharacterModel Add(CharacterModel model)
         {
-            return ConvertToModel(_repository.Add(ConvertToDto(model)));
+            CharacterDTO addedDto = _repository.Add(ConvertToDto(model));
+            return ConvertToModel(addedDto);
         }
 
         private CharacterDTO ConvertToDto(CharacterModel model)
