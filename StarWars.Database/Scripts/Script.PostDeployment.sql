@@ -12,3 +12,4 @@ Post-Deployment Script Template
 
 :r .\InsertLookupTableData.sql
 :r .\InsertCharacterTestData.sql
+:r .\SetupUser.sql
