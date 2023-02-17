@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -26,7 +27,7 @@ namespace StarWars.Tests.Data
             CharacterRepository repository = new CharacterRepository(dal);
 
             // Act
-            List<StarWars.Data.DTOs.CharacterDTO> dtos = repository.GetAll();
+            List<StarWars.Data.DTOs.CharacterDTO> dtos = repository.GetAll().ToList();
 
             // Assert
             Assert.AreEqual(recordCount, dtos.Count);
@@ -43,7 +44,7 @@ namespace StarWars.Tests.Data
             CharacterRepository repository = new CharacterRepository(dal);
 
             // Act
-            List<StarWars.Data.DTOs.CharacterDTO> dtos = repository.GetAll();
+            List<StarWars.Data.DTOs.CharacterDTO> dtos = repository.GetAll().ToList();
 
             // Assert
             Assert.AreEqual(1, dtos[0].Id);

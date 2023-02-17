@@ -4,23 +4,26 @@ using StarWars.WebApi.Models;
 
 namespace StarWars.WebApi.Business
 {
+    /// <summary>
+    ///     A business logic layer for <see cref="CharacterModel">character</see>s.
+    /// </summary>
     internal interface ICharacterBLL
     {
         /// <summary>Gets all <see cref="CharacterModel">character</see>s.</summary>
         /// <returns>
-        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
-        ///     <see cref="CharacterModel">character</see>s.
+        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all <see
+        ///     cref="CharacterModel">character</see>s.
         /// </returns>
         IEnumerable<CharacterModel> GetAll();
 
         /// <summary>
-        ///     Gets the <see cref="CharacterModel">character</see> with the specified
-        ///     <paramref name="id">ID</paramref>.
+        ///     Gets the <see cref="CharacterModel">character</see> with the specified <paramref
+        ///     name="id">ID</paramref>.
         /// </summary>
         /// <param name="id">The <see cref="CharacterModel.Id">ID</see> to filter for.</param>
         /// <returns>
-        ///     The <see cref="CharacterModel">character</see> with the specified
-        ///     <paramref name="id">ID</paramref>, or <c><see langword="null">null</see></c> if none
+        ///     The <see cref="CharacterModel">character</see> with the specified <paramref
+        ///     name="id">ID</paramref>, or <c><see langword="null">null</see></c> if none
         ///     exists.
         /// </returns>
         CharacterModel GetById(int id);
@@ -29,32 +32,36 @@ namespace StarWars.WebApi.Business
         ///     Gets the first <see cref="CharacterModel">character</see> with the specified
         ///     <paramref name="name">name</paramref>.
         /// </summary>
-        /// <param name="name">The <see cref="CharacterModel.Name">name</see> to filter for.</param>
+        /// <param name="name">
+        ///     The <see cref="CharacterModel.Name">name</see> to filter for.
+        /// </param>
         /// <returns>
         ///     The first <see cref="CharacterModel">character</see> with the specified
-        ///     <paramref name="name">name</paramref>, or <c><see langword="null">null</see></c> if none
-        ///     is found.
+        ///     <paramref name="name">name</paramref>, or <c><see langword="null">null</see></c>
+        ///     if none is found.
         /// </returns>
         CharacterModel GetOneByName(string name);
 
         /// <summary>
-        ///    Gets all <see cref="CharacterModel">character</see>s with the specified
-        ///    <paramref name="allegiance">allegiance</paramref>.
+        ///    Gets all <see cref="CharacterModel">character</see>s with the specified <paramref
+        ///    name="allegiance">allegiance</paramref>.
         /// </summary>
         /// <param name="allegiance">
         ///     The <see cref="CharacterModel.Allegiance">allegiance</see> to filter for.
         /// </param>
         /// <returns>
-        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
-        ///     <see cref="CharacterModel">character</see>s with the specified
-        ///     <paramref name="allegiance">allegiance</paramref>.
+        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all <see
+        ///     cref="CharacterModel">character</see>s with the specified <paramref
+        ///     name="allegiance">allegiance</paramref>.
         /// </returns>
         IEnumerable<CharacterModel> GetAllByAllegiance(Allegiance allegiance);
 
-        /// <summary>Gets all <see cref="CharacterModel">character</see>s that are Jedi.</summary>
+        /// <summary>
+        ///     Gets all <see cref="CharacterModel">character</see>s that are Jedi.
+        /// </summary>
         /// <returns>
-        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
-        ///     <see cref="CharacterModel">character</see>s that are Jedi.
+        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all <see
+        ///     cref="CharacterModel">character</see>s that are Jedi.
         /// </returns>
         IEnumerable<CharacterModel> GetAllJedi();
 
@@ -66,8 +73,8 @@ namespace StarWars.WebApi.Business
         ///     The <see cref="CharacterModel.TrilogyIntroducedIn">trilogy</see> to filter for.
         /// </param>
         /// <returns>
-        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all
-        ///     <see cref="CharacterModel">character</see>s that are introduced in the specified
+        ///     A <see cref="IEnumerable{CharacterModel}">collection</see> of all <see
+        ///     cref="CharacterModel">character</see>s that are introduced in the specified
         ///     <paramref name="trilogy">trilogy</paramref>.
         /// </returns>
         IEnumerable<CharacterModel> GetAllByTrilogy(Trilogy trilogy);
@@ -79,9 +86,9 @@ namespace StarWars.WebApi.Business
         ///     The <see cref="CharacterModel">character</see> to add to the collection.
         /// </param>
         /// <returns>
-        ///     The <see cref="CharacterModel">character</see> that was added to the collection, or
-        ///     <c><see langword="null">null</see></c> if the
-        ///     <paramref name="character">character</paramref> was not added.
+        ///     The <see cref="CharacterModel">character</see> that was added to the collection,
+        ///     or <c><see langword="null">null</see></c> if the <paramref
+        ///     name="character">character</paramref> was not added.
         /// </returns>
         CharacterModel Add(CharacterModel character);
     }

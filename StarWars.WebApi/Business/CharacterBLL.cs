@@ -6,19 +6,20 @@ using StarWars.WebApi.Models;
 
 namespace StarWars.WebApi.Business
 {
+    /// <inheritdoc cref="ICharacterBLL"/>
     public class CharacterBLL : ICharacterBLL
     {
         private readonly ICharacterRepository _repository;
 
         /// <summary>
-        ///     Initializes a new <see cref="CharacterBLL">CharacterBLL</see> instance with the default
-        ///     <see cref="CharacterRepository">repository</see> backend.
+        ///     Initializes a new <see cref="CharacterBLL">CharacterBLL</see> instance with the
+        ///     default <see cref="CharacterRepository">repository</see> backend.
         /// </summary>
         public CharacterBLL() : this(new CharacterRepository()) { }
 
         /// <summary>
-        ///     Initializes a new <see cref="CharacterBLL">CharacterBLL</see> instance with the passed
-        ///     <paramref name="repository">repository</paramref> as the backend.
+        ///     Initializes a new <see cref="CharacterBLL">CharacterBLL</see> instance with the
+        ///     passed <paramref name="repository">repository</paramref> as the backend.
         /// </summary>
         /// <param name="repository">
         ///     The <see cref="ICharacterRepository">repository</see> to use as the backend.
@@ -77,6 +78,19 @@ namespace StarWars.WebApi.Business
             return ConvertToModel(addedDto);
         }
 
+        /// <summary>
+        ///     Converts a <see cref="CharacterModel">character model</see> to a <see
+        ///     cref="CharacterDTO">character DTO</see>.
+        /// </summary>
+        /// <param name="model">
+        ///     The <see cref="CharacterModel">character model</see> to convert.
+        /// </param>
+        /// <returns>The converted <see cref="CharacterDTO">character DTO</see>.</returns>
+        /// <remarks>
+        ///     The <see cref="CharacterModel.Allegiance">allegiance</see> and <see
+        ///     cref="CharacterModel.TrilogyIntroducedIn">trilogy</see> <see langword="enum">enum</see>
+        ///     values are converted to <see cref="int">integer</see> IDs.
+        /// </remarks>
         private CharacterDTO ConvertToDto(CharacterModel model)
         {
             if (model == null)
@@ -93,6 +107,20 @@ namespace StarWars.WebApi.Business
             };
         }
 
+        /// <summary>
+        ///     Converts a <see cref="CharacterDTO">character DTO</see> to a <see
+        ///     cref="CharacterModel">character model</see>.
+        /// </summary>
+        /// <param name="dto">
+        ///     The <see cref="CharacterDTO">character DTO</see> to convert.
+        /// </param>
+        /// <returns>The converted <see cref="CharacterModel">character model</see>.</returns>
+        /// <remarks>
+        ///     The <see cref="CharacterDTO.AllegianceId">allegiance ID</see> is converted to an <see
+        ///     cref="Allegiance">allegiance</see> <see langword="enum">enum</see> and the <see
+        ///     cref="CharacterDTO.TrilogyIntroducedInId">trilogy introduced in ID</see> is converted to
+        ///     a <see cref="Trilogy">trilogy</see> <see langword="enum">enum</see>.
+        /// </remarks>
         private CharacterModel ConvertToModel(CharacterDTO dto)
         {
             if (dto == null)
@@ -109,6 +137,20 @@ namespace StarWars.WebApi.Business
             };
         }
 
+        /// <summary>
+        ///     Converts a <see cref="IEnumerable{CharacterDTO}">collection</see> of <see
+        ///     cref="CharacterDTO">character DTO</see>s to a <see
+        ///     cref="IEnumerable{CharacterModel}">collection</see> of <see
+        ///     cref="CharacterModel">character model</see>s.
+        /// </summary>
+        /// <param name="characterDTOs">
+        ///     The <see cref="IEnumerable{CharacterDTO}">collection</see> of <see
+        ///     cref="CharacterDTO">character DTO</see>s to convert.
+        /// </param>
+        /// <returns>
+        ///     The converted <see cref="IEnumerable{CharacterModel}">collection</see> of <see
+        ///     cref="CharacterModel">character model</see>s.
+        /// </returns>
         private IEnumerable<CharacterModel> ConvertManyToModels(
             IEnumerable<CharacterDTO> characterDTOs
         )

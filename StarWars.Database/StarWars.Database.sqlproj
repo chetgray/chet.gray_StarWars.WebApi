@@ -65,6 +65,7 @@
     <None Include="Scripts\InsertLookupTableData.sql" />
     <None Include="Scripts\InsertCharacterTestData.sql" />
     <None Include="StarWars.Test.local.publish.xml" />
+    <None Include="Scripts\SetupUser.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Character.sql" />

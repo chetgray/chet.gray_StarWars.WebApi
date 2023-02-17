@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 
 namespace StarWars.Data.DataAccess
 {
+    /// <inheritdoc/>
     public class DAL : IDAL
     {
         private readonly string _connectionString;
@@ -14,11 +15,12 @@ namespace StarWars.Data.DataAccess
         ///     <paramref name="connectionString">connection string</paramref>.
         /// </summary>
         /// <param name="connectionString">
-        ///     The connection string to use for any <see cref="SqlConnection">SQL connection</see>s.
+        ///     The connection string to use for any <see cref="SqlConnection">SQL
+        ///     connection</see>s.
         /// </param>
         /// <exception cref="ArgumentNullException">
-        ///     Thrown when the passed <paramref name="connectionString">connection string</paramref> is
-        ///     <c><see langword="null">null</see></c>.
+        ///     Thrown when the passed <paramref name="connectionString">connection
+        ///     string</paramref> is <c><see langword="null">null</see></c>.
         /// </exception>
         public DAL(string connectionString)
         {
@@ -26,6 +28,7 @@ namespace StarWars.Data.DataAccess
                 connectionString ?? throw new ArgumentNullException(nameof(connectionString));
         }
 
+        /// <inheritdoc/>
         public void ExecuteStoredProcedure(
             string storedProcedureName,
             Dictionary<string, object> parameters
@@ -48,6 +51,7 @@ namespace StarWars.Data.DataAccess
             }
         }
 
+        /// <inheritdoc/>
         public object GetValueFromStoredProcedure(
             string storedProcedureName,
             Dictionary<string, object> parameters
@@ -70,6 +74,7 @@ namespace StarWars.Data.DataAccess
             }
         }
 
+        /// <inheritdoc/>
         public DataTable GetTableFromStoredProcedure(
             string storedProcedureName,
             Dictionary<string, object> parameters
